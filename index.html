@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fa-IR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EZ Learn</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+</head>
+
+<body>
+    <header id="menu">
+        <div class="small-menu" id="ezlogo-smallmenu">
+            <button onclick="showCollapseMenu()" class="menu-button">
+                <img src="./img/menu-img/menu-icon.png" alt="">
+            </button>
+            <a href="#"><img src="./img/menu-img/logo.png" alt=""></a>
+        </div>
+        <div class="big-menu">
+            <div>
+                <span><a href="#">ثبت نام</a></span>
+                <span>/</span>
+                <span><a href="#">ورود</a></span>
+            </div>
+            <div id="navbar" class="">
+                <ul>
+                    <li><a href="#">تازه ها</a></li>
+                    <li><a href="#">مدرسین</a></li>
+                    <li><a href="#">بلاگ</a></li>
+                    <li><a href="#">قوانین</a></li>
+                    <li><a href="#">درباره ما</a></li>
+                    <li><a href="#">تماس با ما</a></li>
+                </ul>
+            </div>
+            <div id="search" class="display-none">
+                <form action="#">
+                    <input type="search" placeholder="کلمه کلیدی را وارد و اینتر را بفشارید">
+                </form>
+            </div>
+            <div id="ezlogo-bigmenu">
+                <button onclick="searchFade()">
+                    <img src="./img/menu-img/search-icon.png" alt="">
+                </button>
+                <a href="#"><img src="./img/menu-img/logo.png" alt=""></a>
+            </div>
+        </div>
+    </header>
+
+    <section class="welcome_area">
+        <img src="./img/core-img/E-Learning.jpg" alt="">
+    </section>
+
+    <section class="info_area">
+        <div>
+            <img src="./img/core-img/trophy.png" alt="">
+            <h4>از پرطرفدارترین ها</h4>
+            <p>خوشحالیم که اعلام کنیم که از پر طرفدارترین های ایران هستیم.</p>
+        </div>
+        <div>
+            <img src="./img/core-img/edit.png" alt="">
+            <h4>دارای امتحان</h4>
+            <p> مدرس می تواند بعد از هر درس امتحان طراحی کند تا سطح دانشجو مشخص شود. </p>
+        </div>
+        <div>
+            <img src="./img/core-img/video-camera.png" alt="">
+            <h4>آموزش با کیفیت</h4>
+            <p>سعی شده از طرفی ویدئو ها کیفیت خوبی داشته باشند و از طرفی کم حجم تر باشند.</p>
+        </div>
+        <div>
+            <img src="./img/core-img/presentation.png" alt="">
+            <h4>بازار کار</h4>
+            <p>یکی از مباحث مهمی که در هر آموزش مورد بحث قرار می گیرد کاربرد آن در بازار کار است.</p>
+        </div>
+    </section>
+
+    <section class="courses_area">
+        <p>آموزش ها</p>
+        <h2>نمونه هایی از آموزش های ما ببینید</h2>
+        <div>
+            <ul>
+                <li><a href="#">همه</a></li>
+                <li><a href="#">طراحی گرافیکی</a></li>
+                <li><a href="#">طراحی وب</a></li>
+                <li><a href="#">هوش مصنوعی</a></li>
+                <li><a href="#">کسب و کار</a></li>
+                <li><a href="#">ریاضیات</a></li>
+                <li><a href="#">زبان خارجی</a></li>
+            </ul>
+        </div>
+        <div class="gallery_area">
+            <div>
+                <img src="./img/gallery-img/ai.png" alt="">
+                <div class="gallery-hover">
+                    <a href="#">
+                        <h4>هوش مصنوعی</h4>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <img src="./img/gallery-img/csharp.png" alt="">
+                <div class="gallery-hover">
+                    <a href="#">
+                        <h4>سی شارپ</h4>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <img src="./img/gallery-img/illustrator.png" alt="">
+                <div class="gallery-hover">
+                    <a href="#">
+                        <h4>ایلوستریتور</h4>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <img src="./img/gallery-img/javascript.png" alt="">
+                <div class="gallery-hover">
+                    <a href="#">
+                        <h4>جاوا اسکریپت</h4>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <img src="./img/gallery-img/linux.png" alt="">
+                <div class="gallery-hover">
+                    <a href="#">
+                        <h4>لینوکس</h4>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <img src="./img/gallery-img/math.png" alt="">
+                <div class="gallery-hover">
+                    <a href="#">
+                        <h4>ریاضی</h4>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <img src="./img/gallery-img/photoshop.png" alt="">
+                <div class="gallery-hover">
+                    <a href="#">
+                        <h4>فتوشاپ</h4>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <img src="./img/gallery-img/python.png" alt="">
+                <div class="gallery-hover">
+                    <a href="#">
+                        <h4>پایتون</h4>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="copyright">
+        </div>
+        <div>
+            <a href="#">
+                <i class="fab fa-pinterest"></i>
+            </a>
+            <a href="#">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#">
+                <i class="fab fa-telegram"></i>
+            </a>
+            <a href="#">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

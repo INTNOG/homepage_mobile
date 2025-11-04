@@ -1,0 +1,329 @@
+$menu-color-1: #fff;
+$menu-color-2: #4a7aec;
+$text-color-1:#abadbe;
+$text-color-2:#404551;
+$footer-color: #211b31;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    direction: rtl;
+}
+
+
+header {
+    position: absolute;
+    z-index: 2;
+    height: 20vh;
+    width: 100%;
+
+
+    >div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        >button {
+            width: 40px;
+            height: 40px;
+        }
+
+        >a>img {
+            width: 55px;
+        }
+
+        >div {
+            display: flex;
+
+            input[type=search] {
+                background-color: transparent;
+                border: 1px solid $menu-color-1;
+                border-radius: 3px;
+                padding: 10px;
+                outline: none;
+                width: 100%;
+                margin-left: 300px;
+                color: $menu-color-1;
+            }
+
+            >span {
+                color: $menu-color-2;
+                margin-right: 1vw;
+
+                >a {
+                    color: $menu-color-2;
+                    margin: 0 1vw;
+                    text-decoration: none;
+
+                    &:hover {
+                        transition-duration: .5s;
+                        color: $menu-color-1;
+                    }
+                }
+            }
+
+            >ul {
+                display: flex;
+                list-style: none;
+
+                >li {
+                    margin: 0 1vw;
+
+                    >a {
+                        color: $menu-color-1;
+                        text-decoration: none;
+
+                        &:hover {
+                            transition-duration: .5s;
+                            color: #4a7aec;
+                        }
+                    }
+                }
+            }
+
+            >a>img {
+                margin: 0 2vw;
+                width: 55px;
+            }
+
+            >button {
+                background-color: transparent;
+                border: 0;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.small-menu {
+    display: none;
+}
+
+.menu-button {
+    >img {
+        width: 100%;
+    }
+}
+
+.display-none {
+    display: none;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    height: 10vh;
+    background-color: #25499f;
+    animation: slide-down .7s;
+}
+
+@keyframes slide-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+
+    100% {
+        opacity: .9;
+        transform: translateY(0);
+    }
+}
+
+section.welcome_area {
+    position: relative;
+    background-image: url("../img/bg-img/welcome-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    >img {
+        opacity: .85;
+        width: 700px;
+        border-radius: 10px;
+    }
+}
+
+section.info_area {
+    height: 400px;
+    display: flex;
+
+    >div {
+        width: 22vw;
+        text-align: center;
+        margin: 30px .5vw 0 .5vw;
+        padding: 1vw;
+        height: 250px;
+
+        >img {
+            margin-top: 30px;
+        }
+
+        >h4 {
+            margin: 25px 0;
+            color: $text-color-2;
+        }
+
+        >p {
+            color: $text-color-1;
+        }
+
+        &:hover {
+            box-shadow: 0 0 5px 0px gray;
+        }
+    }
+}
+
+section.courses_area {
+    text-align: center;
+
+    >p {
+        margin-bottom: 15px;
+        color: darken($color: $text-color-1, $amount: 22);
+    }
+
+    >h2 {
+        color: #404551;
+        margin-bottom: 80px;
+    }
+
+    >div {
+        margin-bottom: 80px;
+
+        >ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+
+            >li {
+                margin-right: 20px;
+
+                >a {
+                    text-decoration: none;
+                    color: $text-color-1;
+
+                    &:hover {
+                        color: $menu-color-2;
+                    }
+                }
+            }
+        }
+    }
+
+    div.gallery_area {
+        width: 100%;
+        height: 50%;
+
+        >div {
+            float: left;
+            position: relative;
+            width: 25%;
+            display: inline-block;
+            overflow: hidden;
+            font-size: 0;
+
+            >img {
+                width: 100%;
+                transition-duration: .5s;
+                opacity: .9;
+            }
+
+            &:hover {
+                >img {
+                    transform: scale(1.1);
+                    filter: blur(8px);
+                }
+
+                >div.gallery-hover {
+                    opacity: .5;
+                }
+            }
+
+            div.gallery-hover {
+                position: absolute;
+                opacity: 0;
+                width: 100%;
+                height: 100%;
+                background-color: $menu-color-2;
+                left: 0;
+                top: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                >a {
+                    text-decoration: none;
+
+                    >h4 {
+                        font-size: 1rem;
+                        color: $menu-color-1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer {
+    margin-top: 50%;
+    background-color: $footer-color;
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    >div {
+        >p {
+            color: $text-color-1;
+        }
+
+        >a {
+            margin: 0 1vw;
+            text-decoration: none;
+            color: $text-color-1;
+
+            &:hover {
+                transition-duration: .5s;
+                color: $menu-color-1;
+            }
+        }
+    }
+}
+
+#ezlogo {
+    &-bigmenu {
+        margin-top: .7vh;
+
+        a>img {
+            width: 8vh;
+        }
+    }
+
+    &-smallmenu {
+
+        // display: none;
+        button {
+            width: 6vh;
+            height: 6vh;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            >img {
+                width: 5vh;
+            }
+        }
+
+        a>img {
+            width: 7vh;
+        }
+    }
+}
